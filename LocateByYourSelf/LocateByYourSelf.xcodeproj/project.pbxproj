@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7053FD1187195A3004B5E98 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7053FD0187195A3004B5E98 /* Shephertz_App42_iOS_API.framework */; };
 		D75B25FF186D85B800C3C33E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75B25FE186D85B800C3C33E /* Foundation.framework */; };
 		D75B2601186D85B800C3C33E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75B2600186D85B800C3C33E /* CoreGraphics.framework */; };
 		D75B2603186D85B800C3C33E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75B2602186D85B800C3C33E /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7053FD0187195A3004B5E98 /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
 		D75B25FB186D85B800C3C33E /* LocateByYourSelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocateByYourSelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75B25FE186D85B800C3C33E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D75B2600186D85B800C3C33E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75B2601186D85B800C3C33E /* CoreGraphics.framework in Frameworks */,
+				D7053FD1187195A3004B5E98 /* Shephertz_App42_iOS_API.framework in Frameworks */,
 				D75B2603186D85B800C3C33E /* UIKit.framework in Frameworks */,
 				D75B25FF186D85B800C3C33E /* Foundation.framework in Frameworks */,
 			);
@@ -101,6 +104,7 @@
 		D75B25FD186D85B800C3C33E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7053FD0187195A3004B5E98 /* Shephertz_App42_iOS_API.framework */,
 				D75B25FE186D85B800C3C33E /* Foundation.framework */,
 				D75B2600186D85B800C3C33E /* CoreGraphics.framework */,
 				D75B2602186D85B800C3C33E /* UIKit.framework */,
@@ -379,6 +383,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shephertztechnologies/Desktop/Rajeev/App42_iOS_Samples/LocateByYourSelf,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocateByYourSelf/LocateByYourSelf-Prefix.pch";
 				INFOPLIST_FILE = "LocateByYourSelf/LocateByYourSelf-Info.plist";
@@ -392,6 +400,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shephertztechnologies/Desktop/Rajeev/App42_iOS_Samples/LocateByYourSelf,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LocateByYourSelf/LocateByYourSelf-Prefix.pch";
 				INFOPLIST_FILE = "LocateByYourSelf/LocateByYourSelf-Info.plist";
@@ -461,6 +473,7 @@
 				D75B262F186D85B800C3C33E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D75B2630186D85B800C3C33E /* Build configuration list for PBXNativeTarget "LocateByYourSelfTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +482,7 @@
 				D75B2632186D85B800C3C33E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
