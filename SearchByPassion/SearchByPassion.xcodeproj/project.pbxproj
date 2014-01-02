@@ -23,6 +23,8 @@
 		D712384C1872DB0600380F18 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D712384A1872DB0600380F18 /* InfoPlist.strings */; };
 		D712384E1872DB0600380F18 /* SearchByPassionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D712384D1872DB0600380F18 /* SearchByPassionTests.m */; };
 		D71238591872DE5E00380F18 /* App42LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71238581872DE5E00380F18 /* App42LoginViewController.m */; };
+		D71E1C6B18755EE00088F8C9 /* App42ApiHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D71E1C6A18755EE00088F8C9 /* App42ApiHandler.m */; };
+		D71E1C6D1875674B0088F8C9 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71E1C6C1875674B0088F8C9 /* Shephertz_App42_iOS_API.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,9 @@
 		D712384D1872DB0600380F18 /* SearchByPassionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchByPassionTests.m; sourceTree = "<group>"; };
 		D71238571872DE5E00380F18 /* App42LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42LoginViewController.h; sourceTree = "<group>"; };
 		D71238581872DE5E00380F18 /* App42LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42LoginViewController.m; sourceTree = "<group>"; };
+		D71E1C6918755EE00088F8C9 /* App42ApiHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42ApiHandler.h; sourceTree = "<group>"; };
+		D71E1C6A18755EE00088F8C9 /* App42ApiHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42ApiHandler.m; sourceTree = "<group>"; };
+		D71E1C6C1875674B0088F8C9 /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shephertz_App42_iOS_API.framework; path = ../../APP42_SDK/App42_iOS_API/Products/Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D71238221872DB0600380F18 /* CoreGraphics.framework in Frameworks */,
+				D71E1C6D1875674B0088F8C9 /* Shephertz_App42_iOS_API.framework in Frameworks */,
 				D71238241872DB0600380F18 /* UIKit.framework in Frameworks */,
 				D71238201872DB0600380F18 /* Foundation.framework in Frameworks */,
 			);
@@ -107,6 +113,7 @@
 		D712381E1872DB0600380F18 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D71E1C6C1875674B0088F8C9 /* Shephertz_App42_iOS_API.framework */,
 				D712381F1872DB0600380F18 /* Foundation.framework */,
 				D71238211872DB0600380F18 /* CoreGraphics.framework */,
 				D71238231872DB0600380F18 /* UIKit.framework */,
@@ -127,6 +134,8 @@
 				D71238351872DB0600380F18 /* App42FirstViewController.m */,
 				D71238371872DB0600380F18 /* App42SecondViewController.h */,
 				D71238381872DB0600380F18 /* App42SecondViewController.m */,
+				D71E1C6918755EE00088F8C9 /* App42ApiHandler.h */,
+				D71E1C6A18755EE00088F8C9 /* App42ApiHandler.m */,
 				D712383A1872DB0600380F18 /* Images.xcassets */,
 				D71238261872DB0600380F18 /* Supporting Files */,
 			);
@@ -262,6 +271,7 @@
 			files = (
 				D71238391872DB0600380F18 /* App42SecondViewController.m in Sources */,
 				D71238361872DB0600380F18 /* App42FirstViewController.m in Sources */,
+				D71E1C6B18755EE00088F8C9 /* App42ApiHandler.m in Sources */,
 				D71238591872DE5E00380F18 /* App42LoginViewController.m in Sources */,
 				D71238301872DB0600380F18 /* App42AppDelegate.m in Sources */,
 				D712382C1872DB0600380F18 /* main.m in Sources */,
@@ -391,6 +401,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shephertztechnologies/Desktop/Rajeev/APP42_SDK/App42_iOS_API/Products,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SearchByPassion/SearchByPassion-Prefix.pch";
 				INFOPLIST_FILE = "SearchByPassion/SearchByPassion-Info.plist";
@@ -404,6 +418,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shephertztechnologies/Desktop/Rajeev/APP42_SDK/App42_iOS_API/Products,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SearchByPassion/SearchByPassion-Prefix.pch";
 				INFOPLIST_FILE = "SearchByPassion/SearchByPassion-Info.plist";
@@ -473,6 +491,7 @@
 				D71238531872DB0600380F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D71238541872DB0600380F18 /* Build configuration list for PBXNativeTarget "SearchByPassionTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +500,7 @@
 				D71238561872DB0600380F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
