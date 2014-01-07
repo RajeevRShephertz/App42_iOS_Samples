@@ -64,6 +64,7 @@
 		D71E1C6918755EE00088F8C9 /* App42ApiHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42ApiHandler.h; sourceTree = "<group>"; };
 		D71E1C6A18755EE00088F8C9 /* App42ApiHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42ApiHandler.m; sourceTree = "<group>"; };
 		D71E1C6C1875674B0088F8C9 /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shephertz_App42_iOS_API.framework; path = ../../APP42_SDK/App42_iOS_API/Products/Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
+		D7538B571876BA37005A946B /* App42Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App42Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +137,7 @@
 				D71238381872DB0600380F18 /* App42SecondViewController.m */,
 				D71E1C6918755EE00088F8C9 /* App42ApiHandler.h */,
 				D71E1C6A18755EE00088F8C9 /* App42ApiHandler.m */,
+				D7538B571876BA37005A946B /* App42Constants.h */,
 				D712383A1872DB0600380F18 /* Images.xcassets */,
 				D71238261872DB0600380F18 /* Supporting Files */,
 			);

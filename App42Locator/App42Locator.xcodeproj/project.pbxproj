@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D732C7DC187C126300C717CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7DB187C126300C717CE /* Foundation.framework */; };
+		D732C7DE187C126300C717CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7DD187C126300C717CE /* CoreGraphics.framework */; };
+		D732C7E0187C126300C717CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7DF187C126300C717CE /* UIKit.framework */; };
+		D732C7E6187C126300C717CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D732C7E4187C126300C717CE /* InfoPlist.strings */; };
+		D732C7E8187C126300C717CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D732C7E7187C126300C717CE /* main.m */; };
+		D732C7EC187C126300C717CE /* App42AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D732C7EB187C126300C717CE /* App42AppDelegate.m */; };
+		D732C7EF187C126300C717CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D732C7ED187C126300C717CE /* Main.storyboard */; };
+		D732C7F2187C126300C717CE /* App42ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D732C7F1187C126300C717CE /* App42ViewController.m */; };
+		D732C7F4187C126300C717CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D732C7F3187C126300C717CE /* Images.xcassets */; };
+		D732C7FB187C126300C717CE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7FA187C126300C717CE /* XCTest.framework */; };
+		D732C7FC187C126300C717CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7DB187C126300C717CE /* Foundation.framework */; };
+		D732C7FD187C126300C717CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7DF187C126300C717CE /* UIKit.framework */; };
+		D732C805187C126400C717CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D732C803187C126300C717CE /* InfoPlist.strings */; };
+		D732C807187C126400C717CE /* App42LocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D732C806187C126400C717CE /* App42LocatorTests.m */; };
+		D732C811187C142C00C717CE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C810187C142C00C717CE /* CoreLocation.framework */; };
+		D732C813187C144000C717CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C812187C144000C717CE /* MapKit.framework */; };
+		D732C81A187C287200C717CE /* calloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D732C815187C287200C717CE /* calloutView.xib */; };
+		D732C81B187C287200C717CE /* CalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = D732C817187C287200C717CE /* CalloutView.m */; };
+		D732C81C187C287200C717CE /* myAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D732C819187C287200C717CE /* myAnnotation.m */; };
+		D732C821187C2BCF00C717CE /* callout.png in Resources */ = {isa = PBXBuildFile; fileRef = D732C81D187C2BCF00C717CE /* callout.png */; };
+		D732C822187C2BCF00C717CE /* callout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D732C81E187C2BCF00C717CE /* callout@2x.png */; };
+		D732C823187C2BCF00C717CE /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = D732C81F187C2BCF00C717CE /* pin.png */; };
+		D732C824187C2BCF00C717CE /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D732C820187C2BCF00C717CE /* pin@2x.png */; };
+		D732C827187C2E8E00C717CE /* App42ApiHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D732C826187C2E8E00C717CE /* App42ApiHandler.m */; };
+		D732C829187C2ED200C717CE /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C828187C2ED200C717CE /* Shephertz_App42_iOS_API.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D732C7FE187C126300C717CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D732C7D0187C126300C717CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D732C7D7187C126300C717CE;
+			remoteInfo = App42Locator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D732C7D8187C126300C717CE /* App42Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App42Locator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D732C7DB187C126300C717CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D732C7DD187C126300C717CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D732C7DF187C126300C717CE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D732C7E3187C126300C717CE /* App42Locator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "App42Locator-Info.plist"; sourceTree = "<group>"; };
+		D732C7E5187C126300C717CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D732C7E7187C126300C717CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D732C7E9187C126300C717CE /* App42Locator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "App42Locator-Prefix.pch"; sourceTree = "<group>"; };
+		D732C7EA187C126300C717CE /* App42AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App42AppDelegate.h; sourceTree = "<group>"; };
+		D732C7EB187C126300C717CE /* App42AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App42AppDelegate.m; sourceTree = "<group>"; };
+		D732C7EE187C126300C717CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D732C7F0187C126300C717CE /* App42ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App42ViewController.h; sourceTree = "<group>"; };
+		D732C7F1187C126300C717CE /* App42ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App42ViewController.m; sourceTree = "<group>"; };
+		D732C7F3187C126300C717CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D732C7F9187C126300C717CE /* App42LocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = App42LocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D732C7FA187C126300C717CE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D732C802187C126300C717CE /* App42LocatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "App42LocatorTests-Info.plist"; sourceTree = "<group>"; };
+		D732C804187C126300C717CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D732C806187C126400C717CE /* App42LocatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = App42LocatorTests.m; sourceTree = "<group>"; };
+		D732C810187C142C00C717CE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D732C812187C144000C717CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D732C814187C159300C717CE /* App42Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App42Constants.h; sourceTree = "<group>"; };
+		D732C815187C287200C717CE /* calloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = calloutView.xib; sourceTree = "<group>"; };
+		D732C816187C287200C717CE /* CalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalloutView.h; sourceTree = "<group>"; };
+		D732C817187C287200C717CE /* CalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalloutView.m; sourceTree = "<group>"; };
+		D732C818187C287200C717CE /* myAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myAnnotation.h; sourceTree = "<group>"; };
+		D732C819187C287200C717CE /* myAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myAnnotation.m; sourceTree = "<group>"; };
+		D732C81D187C2BCF00C717CE /* callout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = callout.png; sourceTree = "<group>"; };
+		D732C81E187C2BCF00C717CE /* callout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "callout@2x.png"; sourceTree = "<group>"; };
+		D732C81F187C2BCF00C717CE /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		D732C820187C2BCF00C717CE /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
+		D732C825187C2E8E00C717CE /* App42ApiHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42ApiHandler.h; sourceTree = "<group>"; };
+		D732C826187C2E8E00C717CE /* App42ApiHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42ApiHandler.m; sourceTree = "<group>"; };
+		D732C828187C2ED200C717CE /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Shephertz_App42_iOS_API.framework; path = ../../APP42_SDK/App42_iOS_API/Products/Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D732C7D5187C126300C717CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D732C813187C144000C717CE /* MapKit.framework in Frameworks */,
+				D732C811187C142C00C717CE /* CoreLocation.framework in Frameworks */,
+				D732C7DE187C126300C717CE /* CoreGraphics.framework in Frameworks */,
+				D732C829187C2ED200C717CE /* Shephertz_App42_iOS_API.framework in Frameworks */,
+				D732C7E0187C126300C717CE /* UIKit.framework in Frameworks */,
+				D732C7DC187C126300C717CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D732C7F6187C126300C717CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D732C7FB187C126300C717CE /* XCTest.framework in Frameworks */,
+				D732C7FD187C126300C717CE /* UIKit.framework in Frameworks */,
+				D732C7FC187C126300C717CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D732C7CF187C126300C717CE = {
+			isa = PBXGroup;
+			children = (
+				D732C7E1187C126300C717CE /* App42Locator */,
+				D732C800187C126300C717CE /* App42LocatorTests */,
+				D732C7DA187C126300C717CE /* Frameworks */,
+				D732C7D9187C126300C717CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D732C7D9187C126300C717CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D732C7D8187C126300C717CE /* App42Locator.app */,
+				D732C7F9187C126300C717CE /* App42LocatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D732C7DA187C126300C717CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D732C828187C2ED200C717CE /* Shephertz_App42_iOS_API.framework */,
+				D732C812187C144000C717CE /* MapKit.framework */,
+				D732C810187C142C00C717CE /* CoreLocation.framework */,
+				D732C7DB187C126300C717CE /* Foundation.framework */,
+				D732C7DD187C126300C717CE /* CoreGraphics.framework */,
+				D732C7DF187C126300C717CE /* UIKit.framework */,
+				D732C7FA187C126300C717CE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D732C7E1187C126300C717CE /* App42Locator */ = {
+			isa = PBXGroup;
+			children = (
+				D732C7EA187C126300C717CE /* App42AppDelegate.h */,
+				D732C7EB187C126300C717CE /* App42AppDelegate.m */,
+				D732C825187C2E8E00C717CE /* App42ApiHandler.h */,
+				D732C826187C2E8E00C717CE /* App42ApiHandler.m */,
+				D732C7ED187C126300C717CE /* Main.storyboard */,
+				D732C7F0187C126300C717CE /* App42ViewController.h */,
+				D732C7F1187C126300C717CE /* App42ViewController.m */,
+				D732C814187C159300C717CE /* App42Constants.h */,
+				D732C815187C287200C717CE /* calloutView.xib */,
+				D732C816187C287200C717CE /* CalloutView.h */,
+				D732C817187C287200C717CE /* CalloutView.m */,
+				D732C818187C287200C717CE /* myAnnotation.h */,
+				D732C819187C287200C717CE /* myAnnotation.m */,
+				D732C7F3187C126300C717CE /* Images.xcassets */,
+				D732C7E2187C126300C717CE /* Supporting Files */,
+			);
+			path = App42Locator;
+			sourceTree = "<group>";
+		};
+		D732C7E2187C126300C717CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D732C81D187C2BCF00C717CE /* callout.png */,
+				D732C81E187C2BCF00C717CE /* callout@2x.png */,
+				D732C81F187C2BCF00C717CE /* pin.png */,
+				D732C820187C2BCF00C717CE /* pin@2x.png */,
+				D732C7E3187C126300C717CE /* App42Locator-Info.plist */,
+				D732C7E4187C126300C717CE /* InfoPlist.strings */,
+				D732C7E7187C126300C717CE /* main.m */,
+				D732C7E9187C126300C717CE /* App42Locator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D732C800187C126300C717CE /* App42LocatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				D732C806187C126400C717CE /* App42LocatorTests.m */,
+				D732C801187C126300C717CE /* Supporting Files */,
+			);
+			path = App42LocatorTests;
+			sourceTree = "<group>";
+		};
+		D732C801187C126300C717CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D732C802187C126300C717CE /* App42LocatorTests-Info.plist */,
+				D732C803187C126300C717CE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D732C7D7187C126300C717CE /* App42Locator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D732C80A187C126400C717CE /* Build configuration list for PBXNativeTarget "App42Locator" */;
+			buildPhases = (
+				D732C7D4187C126300C717CE /* Sources */,
+				D732C7D5187C126300C717CE /* Frameworks */,
+				D732C7D6187C126300C717CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = App42Locator;
+			productName = App42Locator;
+			productReference = D732C7D8187C126300C717CE /* App42Locator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D732C7F8187C126300C717CE /* App42LocatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D732C80D187C126400C717CE /* Build configuration list for PBXNativeTarget "App42LocatorTests" */;
+			buildPhases = (
+				D732C7F5187C126300C717CE /* Sources */,
+				D732C7F6187C126300C717CE /* Frameworks */,
+				D732C7F7187C126300C717CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D732C7FF187C126300C717CE /* PBXTargetDependency */,
+			);
+			name = App42LocatorTests;
+			productName = App42LocatorTests;
+			productReference = D732C7F9187C126300C717CE /* App42LocatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D732C7D0187C126300C717CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = App42;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "ShepHertz Technologies Pvt Ltd.";
+				TargetAttributes = {
+					D732C7F8187C126300C717CE = {
+						TestTargetID = D732C7D7187C126300C717CE;
+					};
+				};
+			};
+			buildConfigurationList = D732C7D3187C126300C717CE /* Build configuration list for PBXProject "App42Locator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D732C7CF187C126300C717CE;
+			productRefGroup = D732C7D9187C126300C717CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D732C7D7187C126300C717CE /* App42Locator */,
+				D732C7F8187C126300C717CE /* App42LocatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D732C7D6187C126300C717CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D732C821187C2BCF00C717CE /* callout.png in Resources */,
+				D732C7F4187C126300C717CE /* Images.xcassets in Resources */,
+				D732C7E6187C126300C717CE /* InfoPlist.strings in Resources */,
+				D732C823187C2BCF00C717CE /* pin.png in Resources */,
+				D732C822187C2BCF00C717CE /* callout@2x.png in Resources */,
+				D732C7EF187C126300C717CE /* Main.storyboard in Resources */,
+				D732C824187C2BCF00C717CE /* pin@2x.png in Resources */,
+				D732C81A187C287200C717CE /* calloutView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D732C7F7187C126300C717CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D732C805187C126400C717CE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D732C7D4187C126300C717CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D732C7F2187C126300C717CE /* App42ViewController.m in Sources */,
+				D732C827187C2E8E00C717CE /* App42ApiHandler.m in Sources */,
+				D732C81C187C287200C717CE /* myAnnotation.m in Sources */,
+				D732C7EC187C126300C717CE /* App42AppDelegate.m in Sources */,
+				D732C7E8187C126300C717CE /* main.m in Sources */,
+				D732C81B187C287200C717CE /* CalloutView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D732C7F5187C126300C717CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D732C807187C126400C717CE /* App42LocatorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D732C7FF187C126300C717CE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D732C7D7187C126300C717CE /* App42Locator */;
+			targetProxy = D732C7FE187C126300C717CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D732C7E4187C126300C717CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D732C7E5187C126300C717CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D732C7ED187C126300C717CE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D732C7EE187C126300C717CE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D732C803187C126300C717CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D732C804187C126300C717CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D732C808187C126400C717CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D732C809187C126400C717CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D732C80B187C126400C717CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shephertztechnologies/Desktop/Rajeev/APP42_SDK/App42_iOS_API/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "App42Locator/App42Locator-Prefix.pch";
+				INFOPLIST_FILE = "App42Locator/App42Locator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D732C80C187C126400C717CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shephertztechnologies/Desktop/Rajeev/APP42_SDK/App42_iOS_API/Products,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "App42Locator/App42Locator-Prefix.pch";
+				INFOPLIST_FILE = "App42Locator/App42Locator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D732C80E187C126400C717CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App42Locator.app/App42Locator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "App42Locator/App42Locator-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "App42LocatorTests/App42LocatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D732C80F187C126400C717CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/App42Locator.app/App42Locator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "App42Locator/App42Locator-Prefix.pch";
+				INFOPLIST_FILE = "App42LocatorTests/App42LocatorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D732C7D3187C126300C717CE /* Build configuration list for PBXProject "App42Locator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D732C808187C126400C717CE /* Debug */,
+				D732C809187C126400C717CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D732C80A187C126400C717CE /* Build configuration list for PBXNativeTarget "App42Locator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D732C80B187C126400C717CE /* Debug */,
+				D732C80C187C126400C717CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D732C80D187C126400C717CE /* Build configuration list for PBXNativeTarget "App42LocatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D732C80E187C126400C717CE /* Debug */,
+				D732C80F187C126400C717CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D732C7D0187C126300C717CE /* Project object */;
+}

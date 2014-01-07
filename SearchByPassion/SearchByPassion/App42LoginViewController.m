@@ -8,9 +8,8 @@
 
 #import "App42LoginViewController.h"
 #import "App42ApiHandler.h"
+#import "App42Constants.h"
 
-#define TITLE @"title"
-#define MESSAGE @"message"
 
 @interface App42LoginViewController ()
 
@@ -21,7 +20,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -72,17 +72,21 @@
         }
         else
         {
-             User *user = [[App42ApiHandler sharedInstance] loginUserWithName:userName password:password];
-            NSLog(@"Reason=%@",user.strResponse);
-            if (user)
+             NSMutableDictionary *responseDict = [[App42ApiHandler sharedInstance] loginUserWithName:userName password:password];
+            
+            if (responseDict)
             {
-                if (!user.isResponseSuccess)
+                if (![[responseDict objectForKey:@"isResponseSuccess"] boolValue])
                 {
-                    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Exception",TITLE,@"User name/Password is incorrect!", nil]];
+                    NSError *error = nil;
+                    SBJSON *json = [[SBJSON alloc] init];
+                    NSDictionary *exceptionDict = [json objectWithString:[responseDict objectForKey:@"exception"] error:&error];
+                    NSString *message = [[exceptionDict objectForKey:@"app42Fault"] objectForKey:@"details"];
+                    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Exception",TITLE,message,MESSAGE, nil]];
                 }
                 else
                 {
-                    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Login",TITLE,@"Loggedin successfully!", nil]];
+                    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Login",TITLE,@"Loggedin successfully!",MESSAGE,[NSNumber numberWithLong:[sender tag]],ALERT_TAG, nil]];
                 }
             }
         }
@@ -90,14 +94,18 @@
     
 }
 
+
 -(IBAction)signUp:(id)sender
 {
     signUpView.hidden = NO;
+    self.navigationItem.title = @"Register";
 }
 
 
 -(IBAction)registerAction:(id)sender
 {
+    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Registration",TITLE,@"Registered successfully!",MESSAGE,[NSNumber numberWithLong:[sender tag]],ALERT_TAG, nil]];
+    return;
     NSString *userName = userNameToSignUp.text;
     NSString *password = passwordToSignUp.text;
     NSString *emailId  = emailToSignUp.text;
@@ -122,29 +130,46 @@
         }
         else
         {
-            User *user = [[App42ApiHandler sharedInstance] registerUserWithName:userName email:emailId password:password];
-            if (user)
+            NSMutableDictionary *responseDict = [[App42ApiHandler sharedInstance] registerUserWithName:userName email:emailId password:password];
+            if (responseDict)
             {
-                if (!user.isResponseSuccess)
+                if (![[responseDict objectForKey:@"isResponseSuccess"] boolValue])
                 {
-                    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Exception",TITLE,@"User name/Password is incorrect!", nil]];
+                    NSError *error = nil;
+                    SBJSON *json = [[SBJSON alloc] init];
+                    NSDictionary *exceptionDict = [json objectWithString:[responseDict objectForKey:@"exception"] error:&error];
+                    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Exception",TITLE,[[exceptionDict objectForKey:@"app42Fault"] objectForKey:@"details"],MESSAGE, nil]];
                 }
                 else
                 {
-                    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Login",TITLE,@"Loggedin successfully!", nil]];
+                    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Registration",TITLE,@"Registered successfully!",MESSAGE,[NSNumber numberWithLong:[sender tag]],ALERT_TAG, nil]];
                 }
             }
         }
     }
-    
-    
 }
+
 
 -(void)showAlertWithInfo:(NSDictionary*)infoDict
 {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[infoDict objectForKey:TITLE] message:[infoDict objectForKey:MESSAGE] delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:[infoDict objectForKey:TITLE] message:[infoDict objectForKey:MESSAGE] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    alertView.tag = [[infoDict objectForKey:ALERT_TAG] integerValue];
+    [self.view addSubview:alertView];
     [alertView show];
 }
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ((alertView.tag == 2)||(alertView.tag == 3))
+    {
+       
+    }
+    else
+    {
+        // Do Nothing
+    }
+}
+
 
 -(BOOL)isEmailValid:(NSString*)email
 {
@@ -159,7 +184,6 @@
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     
     return [emailTest evaluateWithObject:email];
-    
 }
 
 

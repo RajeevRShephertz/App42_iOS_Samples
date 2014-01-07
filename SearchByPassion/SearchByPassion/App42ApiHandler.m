@@ -7,6 +7,7 @@
 //
 
 #import "App42ApiHandler.h"
+#import "App42Constants.h"
 
 #define APP_KEY     @"d17353cb6957362f96682e879d00f885b2cc1058b701d270885d0574ff6ffdb4"
 #define SECRET_KEY  @"4a7c95d14612a4913d9e9287c71fbc9541ef68b8a43c028a0666915706bf5fac"
@@ -51,44 +52,51 @@ static App42ApiHandler *_instance = nil;
 }
 
 
-
--(User *)loginUserWithName:(NSString*)userName password:(NSString*)password
+-(NSMutableDictionary*)loginUserWithName:(NSString*)userName password:(NSString*)password
 {
-    
     User *user = nil;
+    NSMutableDictionary *responseDict = [NSMutableDictionary dictionaryWithCapacity:0];
+    
     @try
     {
         UserService *userService = [App42API buildUserService];
         user = [userService authenticateUser:userName password:password];
+        [responseDict setObject:[NSNumber numberWithBool:user.isResponseSuccess] forKey:@"isResponseSuccess"];
+        [responseDict setObject:user forKey:@"user"];
     }
     @catch (App42Exception *exception)
     {
-        
+        [responseDict setObject:[NSNumber numberWithBool:user.isResponseSuccess] forKey:@"isResponseSuccess"];
+        [responseDict setObject:exception.reason forKey:@"exception"];
     }
     @finally
     {
         
     }
-    return user;
+    return responseDict;
 }
--(User *)registerUserWithName:(NSString*)userName email:(NSString*)email password:(NSString*)password
+
+-(NSMutableDictionary*)registerUserWithName:(NSString*)userName email:(NSString*)email password:(NSString*)password
 {
     User *user = nil;
+    NSMutableDictionary *responseDict = [NSMutableDictionary dictionaryWithCapacity:0];
 
     @try
     {
         UserService *userService = [App42API buildUserService];
         user = [userService createUser:userName password:password emailAddress:email];
+        [responseDict setObject:[NSNumber numberWithBool:user.isResponseSuccess] forKey:IS_RESPONSE_SUCCESS];
+        [responseDict setObject:user forKey:@"user"];
     }
-    @catch (NSException *exception)
+    @catch (App42Exception *exception)
     {
-        user = nil;
+        [responseDict setObject:[NSNumber numberWithBool:user.isResponseSuccess] forKey:@"isResponseSuccess"];
+        [responseDict setObject:exception.reason forKey:@"exception"];
     }
     @finally
     {
         
     }
-    return user;
-}
+    return responseDict;}
 
 @end

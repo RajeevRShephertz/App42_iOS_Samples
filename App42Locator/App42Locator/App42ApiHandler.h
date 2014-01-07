@@ -13,6 +13,5 @@
 
 +(App42ApiHandler *)sharedInstance;
 
--(NSMutableDictionary *)loginUserWithName:(NSString*)userName password:(NSString*)password;
--(NSMutableDictionary *)registerUserWithName:(NSString*)userName email:(NSString*)email password:(NSString*)password;
+
 @end

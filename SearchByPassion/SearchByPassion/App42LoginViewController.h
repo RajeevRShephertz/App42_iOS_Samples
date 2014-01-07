@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface App42LoginViewController : UIViewController<UITextFieldDelegate>
+@interface App42LoginViewController : UIViewController<UITextFieldDelegate,UIAlertViewDelegate>
 {
     IBOutlet UIView *signUpView;
     IBOutlet UITextField *userNameToLogin;
