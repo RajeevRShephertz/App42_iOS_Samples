@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-#import <CoreLocation/CLLocationManager.h>
+#import "App42MapViewController.h"
 
-@interface App42ViewController : UIViewController<MKMapViewDelegate,CLLocationManagerDelegate>
+@interface App42ViewController : UIViewController<App42MapViewControllerDelegate>
 {
-    CLLocationManager *locationManager;
-    BOOL updatemap;
+    
 }
 
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) NSArray *markersArray;
+
+
+-(IBAction)getNearBy:(id)sender;
+-(IBAction)getAllStores:(id)sender;
 @end

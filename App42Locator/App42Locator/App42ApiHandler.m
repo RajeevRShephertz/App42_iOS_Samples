@@ -9,8 +9,6 @@
 #import "App42ApiHandler.h"
 #import "App42Constants.h"
 
-#define APP_KEY     @"d17353cb6957362f96682e879d00f885b2cc1058b701d270885d0574ff6ffdb4"
-#define SECRET_KEY  @"4a7c95d14612a4913d9e9287c71fbc9541ef68b8a43c028a0666915706bf5fac"
 
 static App42ApiHandler *_instance = nil;
 
@@ -34,7 +32,7 @@ static App42ApiHandler *_instance = nil;
         _instance = self;
         @try
         {
-            [App42API initializeWithAPIKey:APP_KEY andSecretKey:SECRET_KEY];
+            [App42API initializeWithAPIKey:API_KEY andSecretKey:SECRET_KEY];
             [App42API enableCrashEventHandler:YES];
             [App42API enableApp42Trace:YES];
         }
@@ -51,6 +49,49 @@ static App42ApiHandler *_instance = nil;
     return _instance;
 }
 
+-(NSArray*)getNearByMarkers:(NSDictionary*)geoDict
+{
+    NSArray *markersArray = nil;
+    @try
+    {
+        GeoService *geoService = [App42API buildGeoService];
+        Geo *geo = [geoService getNearByPoint:STORAGE_NAME latitude:[[geoDict objectForKey:LATITUDE] doubleValue] longitude:[[geoDict objectForKey:LONGITUDE] doubleValue] resultLimit:2];
+        //NSLog(@"markersArray = %@",geo.pointList);
+        markersArray = geo.pointList;
+        
+    }
+    @catch (App42Exception *exception)
+    {
+        NSLog(@"exception=%@",exception.reason);
+    }
+    @finally
+    {
+        
+    }
+    return markersArray;
 
+}
+
+-(NSArray*)getAllMarkers
+{
+    NSArray *markersArray = nil;
+    @try
+    {
+        GeoService *geoService = [App42API buildGeoService];
+        Geo *geo = [geoService getAllPoints:STORAGE_NAME];
+        //NSLog(@"markersArray = %@",geo.pointList);
+        markersArray = geo.pointList;
+        
+    }
+    @catch (App42Exception *exception)
+    {
+        NSLog(@"exception=%@",exception.reason);
+    }
+    @finally
+    {
+        
+    }
+    return markersArray;
+}
 
 @end

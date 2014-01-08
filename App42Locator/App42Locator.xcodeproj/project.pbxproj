@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71BA491187D58F700475299 /* App42MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71BA490187D58F700475299 /* App42MapViewController.m */; };
 		D732C7DC187C126300C717CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7DB187C126300C717CE /* Foundation.framework */; };
 		D732C7DE187C126300C717CE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7DD187C126300C717CE /* CoreGraphics.framework */; };
 		D732C7E0187C126300C717CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D732C7DF187C126300C717CE /* UIKit.framework */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D71BA48F187D58F700475299 /* App42MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42MapViewController.h; sourceTree = "<group>"; };
+		D71BA490187D58F700475299 /* App42MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42MapViewController.m; sourceTree = "<group>"; };
 		D732C7D8187C126300C717CE /* App42Locator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App42Locator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D732C7DB187C126300C717CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D732C7DD187C126300C717CE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +154,8 @@
 				D732C7ED187C126300C717CE /* Main.storyboard */,
 				D732C7F0187C126300C717CE /* App42ViewController.h */,
 				D732C7F1187C126300C717CE /* App42ViewController.m */,
+				D71BA48F187D58F700475299 /* App42MapViewController.h */,
+				D71BA490187D58F700475299 /* App42MapViewController.m */,
 				D732C814187C159300C717CE /* App42Constants.h */,
 				D732C815187C287200C717CE /* calloutView.xib */,
 				D732C816187C287200C717CE /* CalloutView.h */,
@@ -301,6 +306,7 @@
 			files = (
 				D732C7F2187C126300C717CE /* App42ViewController.m in Sources */,
 				D732C827187C2E8E00C717CE /* App42ApiHandler.m in Sources */,
+				D71BA491187D58F700475299 /* App42MapViewController.m in Sources */,
 				D732C81C187C287200C717CE /* myAnnotation.m in Sources */,
 				D732C7EC187C126300C717CE /* App42AppDelegate.m in Sources */,
 				D732C7E8187C126300C717CE /* main.m in Sources */,
@@ -521,6 +527,7 @@
 				D732C80C187C126400C717CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D732C80D187C126400C717CE /* Build configuration list for PBXNativeTarget "App42LocatorTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +536,7 @@
 				D732C80F187C126400C717CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

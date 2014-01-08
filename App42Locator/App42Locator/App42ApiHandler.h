@@ -13,5 +13,7 @@
 
 +(App42ApiHandler *)sharedInstance;
 
+-(NSArray*)getAllMarkers;
+-(NSArray*)getNearByMarkers:(NSDictionary*)geoDict;
 
 @end
