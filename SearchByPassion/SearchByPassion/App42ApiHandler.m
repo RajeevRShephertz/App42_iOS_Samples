@@ -87,6 +87,7 @@ static App42ApiHandler *_instance = nil;
         user = [userService createUser:userName password:password emailAddress:email];
         [responseDict setObject:[NSNumber numberWithBool:user.isResponseSuccess] forKey:IS_RESPONSE_SUCCESS];
         [responseDict setObject:user forKey:@"user"];
+        NSLog(@"userName=%@",user.userName);
     }
     @catch (App42Exception *exception)
     {
@@ -97,6 +98,13 @@ static App42ApiHandler *_instance = nil;
     {
         
     }
-    return responseDict;}
+    return responseDict;
+}
+
+
+-(void)insertNewDoc
+{
+    
+}
 
 @end

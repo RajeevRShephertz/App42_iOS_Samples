@@ -104,8 +104,7 @@
 
 -(IBAction)registerAction:(id)sender
 {
-    [self showAlertWithInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Registration",TITLE,@"Registered successfully!",MESSAGE,[NSNumber numberWithLong:[sender tag]],ALERT_TAG, nil]];
-    return;
+   
     NSString *userName = userNameToSignUp.text;
     NSString *password = passwordToSignUp.text;
     NSString *emailId  = emailToSignUp.text;

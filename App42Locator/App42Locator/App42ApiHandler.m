@@ -49,16 +49,14 @@ static App42ApiHandler *_instance = nil;
     return _instance;
 }
 
--(NSArray*)getNearByMarkers:(NSDictionary*)geoDict
+-(NSMutableArray*)getNearByMarkers:(NSDictionary*)geoDict
 {
-    NSArray *markersArray = nil;
+    NSMutableArray *markersArray = nil;
     @try
     {
         GeoService *geoService = [App42API buildGeoService];
-        Geo *geo = [geoService getNearByPoint:STORAGE_NAME latitude:[[geoDict objectForKey:LATITUDE] doubleValue] longitude:[[geoDict objectForKey:LONGITUDE] doubleValue] resultLimit:2];
-        //NSLog(@"markersArray = %@",geo.pointList);
+        Geo *geo = [geoService getNearByPoint:STORAGE_NAME latitude:[[geoDict objectForKey:LATITUDE] doubleValue] longitude:[[geoDict objectForKey:LONGITUDE] doubleValue] resultLimit:1];
         markersArray = geo.pointList;
-        
     }
     @catch (App42Exception *exception)
     {
@@ -72,9 +70,9 @@ static App42ApiHandler *_instance = nil;
 
 }
 
--(NSArray*)getAllMarkers
+-(NSMutableArray*)getAllMarkers
 {
-    NSArray *markersArray = nil;
+    NSMutableArray *markersArray = nil;
     @try
     {
         GeoService *geoService = [App42API buildGeoService];

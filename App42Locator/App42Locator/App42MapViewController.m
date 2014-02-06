@@ -43,6 +43,12 @@
 {
     App42ApiHandler *handler = [App42ApiHandler sharedInstance];
     self.markersArray = [handler getNearByMarkers:geoDict];
+    
+    Points *point = [[Points alloc] initWithGeo:[[self.markersArray objectAtIndex:0] geoObject]];
+    point.lat = [[geoDict objectForKey:LATITUDE] doubleValue];
+    point.lng = [[geoDict objectForKey:LONGITUDE] doubleValue];
+    point.marker = @"You";
+    [self.markersArray addObject:point];
     [self showMarkers];
 }
 
@@ -134,24 +140,24 @@
            fromLocation:(CLLocation *)oldLocation
 {
     NSLog(@"%s",__FUNCTION__);
-    NSLog(@"newLocation=%f, %f",newLocation.coordinate.latitude,newLocation.coordinate.longitude);
-    int distanceThreshold = 2.0; // in meters
-    if ([newLocation distanceFromLocation:oldLocation] < distanceThreshold)
-    {
-        
-    }
-    else
-    {
-        //updatemap = YES;
-    }
     if (updatemap)
     {
         updatemap = NO;
+        [locationManager stopUpdatingLocation];
+        
+        //1
+        CLLocationCoordinate2D zoomLocation;
+        zoomLocation.latitude = newLocation.coordinate.latitude;
+        zoomLocation.longitude= newLocation.coordinate.longitude;
+        // 2
+        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 5.0*METERS_PER_MILE, 5.0*METERS_PER_MILE);
+        [self.mapView setRegion:viewRegion animated:YES];
+
         
         CLLocationCoordinate2D coordinate1;
         coordinate1.latitude = newLocation.coordinate.latitude;
         coordinate1.longitude = newLocation.coordinate.longitude;
-        NSDictionary *geoDict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:newLocation.coordinate.latitude],LATITUDE,[NSNumber numberWithDouble:newLocation.coordinate.longitude],LONGITUDE, nil];
+        NSDictionary *geoDict = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithDouble:coordinate1.latitude],LATITUDE,[NSNumber numberWithDouble:coordinate1.longitude],LONGITUDE, nil];
         [self getNearBy:geoDict];
     }
 }
@@ -165,25 +171,31 @@
 
 -(void)showMarkers
 {
-    for (Points *point in markersArray)
+    Points *point;
+    int count = [markersArray count];
+    int counter = 0;
+    for (point in markersArray)
     {
-        //1
-        CLLocationCoordinate2D zoomLocation;
-        zoomLocation.latitude = point.lat;
-        zoomLocation.longitude= point.lng;
-        // 2
-        MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 5.0*METERS_PER_MILE, 5.0*METERS_PER_MILE);
-        [self.mapView setRegion:viewRegion animated:YES];
+        counter++;
+        if (counter==count)
+        {
+            //1
+            CLLocationCoordinate2D zoomLocation;
+            zoomLocation.latitude = point.lat;
+            zoomLocation.longitude= point.lng;
+            // 2
+            MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 5.0*METERS_PER_MILE, 5.0*METERS_PER_MILE);
+            [self.mapView setRegion:viewRegion animated:YES];
+        }
         
         CLLocationCoordinate2D coordinate1;
         coordinate1.latitude = point.lat;
         coordinate1.longitude = point.lng;
         myAnnotation *annotation = [[myAnnotation alloc] initWithCoordinate:coordinate1 title:point.marker];
         [self.mapView addAnnotation:annotation];
-        
     }
+   
 }
-
 
 -(IBAction)cancelButtonAction:(id)sender
 {

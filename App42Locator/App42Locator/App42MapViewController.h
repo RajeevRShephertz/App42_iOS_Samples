@@ -28,7 +28,7 @@
 @property (strong, nonatomic) NSString *titleString;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic, weak) id <App42MapViewControllerDelegate> delegate;
-@property (strong, nonatomic) NSArray *markersArray;
+@property (strong, nonatomic) NSMutableArray *markersArray;
 
 -(IBAction)cancelButtonAction:(id)sender;
 
