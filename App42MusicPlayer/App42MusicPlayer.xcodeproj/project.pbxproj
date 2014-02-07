@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71F1FAA18A4F0400073AFB8 /* App42APIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D71F1FA918A4F0400073AFB8 /* App42APIHandler.m */; };
+		D71F1FAD18A4F8630073AFB8 /* App42PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D71F1FAC18A4F8630073AFB8 /* App42PersistencyManager.m */; };
+		D71F1FAF18A50ACE0073AFB8 /* Shephertz_App42_iOS_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D71F1FAE18A50ACE0073AFB8 /* Shephertz_App42_iOS_API.framework */; };
 		D73289C718A3AD3E002135F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73289C618A3AD3E002135F7 /* Foundation.framework */; };
 		D73289C918A3AD3E002135F7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73289C818A3AD3E002135F7 /* CoreGraphics.framework */; };
 		D73289CB18A3AD3E002135F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73289CA18A3AD3E002135F7 /* UIKit.framework */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D71F1FA818A4F0400073AFB8 /* App42APIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42APIHandler.h; sourceTree = "<group>"; };
+		D71F1FA918A4F0400073AFB8 /* App42APIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42APIHandler.m; sourceTree = "<group>"; };
+		D71F1FAB18A4F8630073AFB8 /* App42PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App42PersistencyManager.h; sourceTree = "<group>"; };
+		D71F1FAC18A4F8630073AFB8 /* App42PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App42PersistencyManager.m; sourceTree = "<group>"; };
+		D71F1FAE18A50ACE0073AFB8 /* Shephertz_App42_iOS_API.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Shephertz_App42_iOS_API.framework; sourceTree = "<group>"; };
+		D71F1FB018A50B2D0073AFB8 /* App42Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = App42Constants.h; sourceTree = "<group>"; };
 		D73289C318A3AD3E002135F7 /* App42MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App42MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D73289C618A3AD3E002135F7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D73289C818A3AD3E002135F7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -67,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D73289C918A3AD3E002135F7 /* CoreGraphics.framework in Frameworks */,
+				D71F1FAF18A50ACE0073AFB8 /* Shephertz_App42_iOS_API.framework in Frameworks */,
 				D73289CB18A3AD3E002135F7 /* UIKit.framework in Frameworks */,
 				D73289C718A3AD3E002135F7 /* Foundation.framework in Frameworks */,
 			);
@@ -85,6 +95,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D71F1FA718A4F02B0073AFB8 /* App42APIHandler */ = {
+			isa = PBXGroup;
+			children = (
+				D71F1FA818A4F0400073AFB8 /* App42APIHandler.h */,
+				D71F1FA918A4F0400073AFB8 /* App42APIHandler.m */,
+				D71F1FAB18A4F8630073AFB8 /* App42PersistencyManager.h */,
+				D71F1FAC18A4F8630073AFB8 /* App42PersistencyManager.m */,
+			);
+			path = App42APIHandler;
+			sourceTree = "<group>";
+		};
 		D73289BA18A3AD3E002135F7 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +128,7 @@
 		D73289C518A3AD3E002135F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D71F1FAE18A50ACE0073AFB8 /* Shephertz_App42_iOS_API.framework */,
 				D73289C618A3AD3E002135F7 /* Foundation.framework */,
 				D73289C818A3AD3E002135F7 /* CoreGraphics.framework */,
 				D73289CA18A3AD3E002135F7 /* UIKit.framework */,
@@ -118,8 +140,10 @@
 		D73289CC18A3AD3E002135F7 /* App42MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				D71F1FA718A4F02B0073AFB8 /* App42APIHandler */,
 				D73289D518A3AD3E002135F7 /* App42AppDelegate.h */,
 				D73289D618A3AD3E002135F7 /* App42AppDelegate.m */,
+				D71F1FB018A50B2D0073AFB8 /* App42Constants.h */,
 				D7328A0118A3B9C4002135F7 /* Controller */,
 				D7328A0418A3B9C4002135F7 /* Model */,
 				D7328A0718A3B9C4002135F7 /* View */,
@@ -289,6 +313,8 @@
 				D73289D318A3AD3E002135F7 /* main.m in Sources */,
 				D7328A0B18A3B9C4002135F7 /* App42Album.m in Sources */,
 				D7328A0C18A3B9C4002135F7 /* App42AlbumView.m in Sources */,
+				D71F1FAD18A4F8630073AFB8 /* App42PersistencyManager.m in Sources */,
+				D71F1FAA18A4F0400073AFB8 /* App42APIHandler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +441,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shephertztechnologies/Desktop/Rajeev/App42_iOS_Samples/App42MusicPlayer,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "App42MusicPlayer/App42MusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = "App42MusicPlayer/App42MusicPlayer-Info.plist";
@@ -428,6 +458,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/shephertztechnologies/Desktop/Rajeev/App42_iOS_Samples/App42MusicPlayer,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "App42MusicPlayer/App42MusicPlayer-Prefix.pch";
 				INFOPLIST_FILE = "App42MusicPlayer/App42MusicPlayer-Info.plist";
@@ -497,6 +531,7 @@
 				D73289F718A3AD3E002135F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D73289F818A3AD3E002135F7 /* Build configuration list for PBXNativeTarget "App42MusicPlayerTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +540,7 @@
 				D73289FA18A3AD3E002135F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
